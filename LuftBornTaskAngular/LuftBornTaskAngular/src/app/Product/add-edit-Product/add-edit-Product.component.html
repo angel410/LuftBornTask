@@ -1,0 +1,24 @@
+<form>
+  <div class="mb-3">
+    <label for="Name" class="form-label">Name</label>
+    <input type="text" class="form-control" [(ngModel)]="Name" name="Name">
+  </div>
+  <div class="mb-3">
+    <label for="Price" class="form-label">Price</label>
+    <input type="text" class="form-control" [(ngModel)]="Price" name="Price">
+  </div>
+  <div class="mb-3">
+    <label for="Quantity" class="form-label">Quantity</label>
+    <input type="text" class="form-control" [(ngModel)]="Quantity" name="comments">
+  </div>
+  <div class="mb-3">
+    <label for="Desc" class="form-label">Desc</label>
+    <input type="text" class="form-control" [(ngModel)]="Desc" name="comments">
+  </div>
+  <button (click)="addInspection()" *ngIf="Product.id==0" class="btn btn-primary">
+    Add
+  </button>
+  <button (click)="updateInspection()" *ngIf="Product.id!=0" class="btn btn-primary">
+    Update
+  </button>
+</form>
